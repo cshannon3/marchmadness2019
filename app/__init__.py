@@ -14,9 +14,9 @@ app = Flask(__name__, static_folder=None)
 
 
 # Import the application views
-from app import views
 
 
 from app.docs.views import docs
 
 app.register_blueprint(docs)
+
