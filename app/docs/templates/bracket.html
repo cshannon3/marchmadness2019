@@ -8,9 +8,9 @@
   <meta http-equiv="Content-Language" content="en" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script src="js/miso.ds.deps.min.0.4.1.js"></script>
+  <script src="{{ url_for('docs.static', filename='js/miso.ds.deps.min.0.4.1.js') }}"></script>
   
-  <link href="css/bracket.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('docs.static', filename='css/bracket.css') }}"  />
 
 </head>
 
