@@ -82,7 +82,7 @@ def connorbracket():
 
 
 @docs.route('/dugall')
-def connorbracket():
+def dugallbracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=21937492"
@@ -92,7 +92,6 @@ def connorbracket():
     gameid = 0
     for gameid in range(126):
         
-
         match = mysoup.find("div", attrs={'data-slotindex': str(gameid)})
         teamid = int(match['data-teamid'])
         teamname = match.find('span', attrs={'class': 'name'}).text.strip()
@@ -124,7 +123,7 @@ def connorbracket():
 
 
 @docs.route('/navarro')
-def connorbracket():
+def navbracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=25101213"
@@ -166,7 +165,7 @@ def connorbracket():
 
 
 @docs.route('/mike')
-def connorbracket():
+def mikebracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=26993737"
@@ -207,7 +206,7 @@ def connorbracket():
     return view('userbracket.html', teams=teams)
 
 @docs.route('/julia')
-def connorbracket():
+def juliabracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=32616442"
@@ -248,7 +247,7 @@ def connorbracket():
     return view('userbracket.html', teams=teams)
 
 @docs.route('/ely')
-def connorbracket():
+def elybracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=28875636"
@@ -289,7 +288,7 @@ def connorbracket():
     return view('userbracket.html', teams=teams)
 
 @docs.route('/manno')
-def connorbracket():
+def mannobracket():
     teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2019/en/entry?entryID=28024719"
