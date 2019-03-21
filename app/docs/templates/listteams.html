@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="theme-color" content="#ffffff">
+     <meta charset="UTF-8">
+    <title>March Madness</title>
+</head>
+<body>
+    <div class="container" id="documentation">
+        <ul class=teams>
+            {% for team in teams %}
+              <li><h2>{{ team }}</h2>
+            {% else %}
+              <li><em>Well fuck</em>
+            {% endfor %}
+            </ul>
+    </div>
+    </body>
+    </html>
+    
