@@ -34,4 +34,4 @@ def listteams():
         teamname = match.find('span', attrs={'class': 'name'})
         teams.append(teamname)
      
-    return render_template('listteams.html' teams=teams)
+    return view('listteams.html' teams=teams)
