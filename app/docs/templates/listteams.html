@@ -11,7 +11,7 @@
     <div class="container">
         <ul class=teams>
             {% for team in teams %}
-              <li><h2>{{ team }}</h2>
+              <li><h2>teamid: {{ team[0] }} name:  {{team[1]}}  seed: {{team[2]}}</h2>
             {% endfor %}
               </ul>
     </div>

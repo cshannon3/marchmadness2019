@@ -22,7 +22,7 @@ def bracket():
 
 @docs.route('/listteams')
 def listteams():
-    teams = []
+    teams = [[]]
     #points = 0
     bracket = "http://fantasy.espn.com/tournament-challenge-bracket/2018/en/entry?entryID=5444662"
     with urllib.request.urlopen(bracket) as response:
@@ -31,7 +31,10 @@ def listteams():
     gameid = 0
     for gameid in range(64):
         match = mysoup.find("div", attrs={'data-slotindex': str(gameid)})
-        teamname = match.find('span', attrs={'class': 'name'})
-        teams.append(teamname)
+        teamid = int(match['data-teamid'][0])
+        teamname = match.find('span', attrs={'class': 'name'}).text.strip()
+        teamseed = match.find('span', attrs={'class': 'seed'}).text.strip()
+        
+        teams.append([teamid, teamname, teamseed])
      
     return view('listteams.html', teams=teams)
