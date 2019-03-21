@@ -3,11 +3,7 @@ from bs4 import BeautifulSoup as soup
 import urllib.request
 
 
-
-
 docs = Blueprint('docs', __name__, static_folder='static', template_folder='templates')
-
-
 
 
 @docs.route('/')
