@@ -23,7 +23,7 @@
 
 <!-- left side of round 1  def better way to deal with colors-->
     <div id="col1">
-        {% for i in range(0, 33) %} 
+        {% for i in range(0, 32) %} 
             {% if i == 16 %}
                 <div class="spacer15"></div>
             {% endif %}
@@ -41,14 +41,14 @@
                 <div class="slot" data-col="1" data-game="1" style="color:green;">( {{teams[i][2]}} )  {{teams[i][1]}}</div>
             {% endif %}
 
-            {% if i%2 != 0 %}
+            {% if i%2 != 0 and (i+1)%16 !=0 %}
                 <hr align="left"/>
             {% endif %}
         {% endfor %}
         
         </div>
     <div id="col2">
-        {% for i in range(65, 80) %} 
+        {% for i in range(64, 80) %} 
             {% if i == 72 %}
                 <div class="spacer2"></div>
             {% endif %}
